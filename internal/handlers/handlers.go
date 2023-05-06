@@ -6,9 +6,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/i5050i100it/bookings/pkg/config"
-	"github.com/i5050i100it/bookings/pkg/models"
-	"github.com/i5050i100it/bookings/pkg/render"
+	"github.com/i5050i100it/bookings/internal/config"
+	"github.com/i5050i100it/bookings/internal/models"
+	"github.com/i5050i100it/bookings/internal/render"
 )
 
 // Repo the repository ised biy the handlers
