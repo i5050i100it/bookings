@@ -20,7 +20,6 @@
 
 	</style>
 
-
 </head>
 
 <body>
@@ -122,6 +121,7 @@
 			text: msg,
 		})
 	}
+
 	function notifyModal(title, text , icon,confirmationBottonText) {
 		Swal.fire({
 			title: title,
@@ -131,6 +131,20 @@
 		})
 
 	}
+
+	{{with .Error}}
+	notify("{{.}}","error")
+	{{end}}
+	
+	{{with .Flash}}
+	notify("{{.}}","success")
+	{{end}}
+
+	{{with .Warning}}
+	notify("{{.}}","warning")
+	{{end}}
+
+
 	// Prompt is javaScript for all alerts , notifications and custom popup dialogs
 	function Prompt() {
 		let toast = function(c){
