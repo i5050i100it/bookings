@@ -8,6 +8,15 @@ This is the repository for my bookings and reservation project.
     To halt the web application use ( Ctrl + C ).
 
 
+Existing pages are 
+- About (/about)
+- Home (/home) 
+- Rooms (/generals-quarters,/majors-suite)
+- Contact (/contact)
+- Reservations (/reservation-summary")
+
+
+
 - Uses Go version 1.21
 - Uses [Chi router](https://github.com/go-chi/chi)
 - Uses [Alex Edwards SCS](https://github.com/alexedwards/scs/v2) session managament
