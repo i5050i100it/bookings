@@ -17,6 +17,7 @@ Existing pages are
 
 
 
+Extensions and Usage 
 - Uses Go version 1.21
 - Uses [Chi router](https://github.com/go-chi/chi)
 - Uses [Alex Edwards SCS](https://github.com/alexedwards/scs/v2) session managament
