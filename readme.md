@@ -22,3 +22,4 @@ Extensions and Usage:
 - Uses [Chi router](https://github.com/go-chi/chi)
 - Uses [Alex Edwards SCS](https://github.com/alexedwards/scs/v2) session managament
 - Uses [nosurf](https://github.com/justinas/nosurf )
+- Uses [pgx](https://github.com/jackc/pgx )
