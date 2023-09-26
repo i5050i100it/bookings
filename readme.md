@@ -23,3 +23,4 @@ Extensions and Usage:
 - Uses [Alex Edwards SCS](https://github.com/alexedwards/scs/v2) session managament
 - Uses [nosurf](https://github.com/justinas/nosurf )
 - Uses [pgx](https://github.com/jackc/pgx )
+- Uses [Mail supports](https://github.com/xhit/go-simple-mail )
