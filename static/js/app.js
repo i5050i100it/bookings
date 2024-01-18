@@ -1,50 +1,51 @@
-// Prompt is javaScript for all alerts , notifications and custom popup dialogs
+// Prompt is our JavaScript module for all alerts, notifications, and custom popup dialogs
 function Prompt() {
-    let toast = function(c){
+    let toast = function (c) {
         const {
             msg = "",
-            icon ="success",
+            icon = "success",
             position = "top-end",
-        } = c ;
-         
+        } = c;
+
         const Toast = Swal.mixin({
-        toast: true,
-        title: msg,
-        position: position,
-        icon: icon,
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-            toast.addEventListener('mouseenter', Swal.stopTimer)
-            toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
+            toast: true,
+            title: msg,
+            position: position,
+            icon: icon,
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
         })
 
         Toast.fire({})
     }
 
-    let success = function(c){
+    let success = function (c) {
         const {
             msg = "",
             title = "",
             footer = "",
         } = c;
+
         Swal.fire({
             icon: 'success',
             title: title,
             text: msg,
             footer: footer,
         })
-        
     }
 
-    let error = function(c){
+    let error = function (c) {
         const {
             msg = "",
             title = "",
             footer = "",
         } = c;
+
         Swal.fire({
             icon: 'error',
             title: title,
@@ -53,26 +54,25 @@ function Prompt() {
         })
     }
 
-
-    async function custom(c){
+    async function custom(c) {
         const {
             icon = "",
             msg = "",
             title = "",
             showConfirmButton = true,
-         } = c
+        } = c;
 
-        const { value: result} = await Swal.fire({
+        const {value: result} = await Swal.fire({
             icon: icon,
             title: title,
-            html:msg,
+            html: msg,
             backdrop: false,
             focusConfirm: false,
             showCancelButton: true,
             showConfirmButton: showConfirmButton,
             willOpen: () => {
                 if (c.willOpen !== undefined) {
-                c.willOpen();
+                    c.willOpen();
                 }
             },
             didOpen: () => {
@@ -80,8 +80,8 @@ function Prompt() {
                     c.didOpen();
                 }
             }
-
         })
+
         if (result) {
             if (result.dismiss !== Swal.DismissReason.cancel) {
                 if (result.value !== "") {
@@ -96,13 +96,12 @@ function Prompt() {
             }
         }
     }
-    
+
 
     return {
-        toast:toast,
-        success:success,
-        error:error,
-        custom:custom,
+        toast: toast,
+        success: success,
+        error: error,
+        custom: custom,
     }
 }
-
