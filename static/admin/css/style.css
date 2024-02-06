@@ -10406,6 +10406,7 @@ progress {
   color: var(--bs-table-striped-color);
 }
 
+
 .table-active {
   --bs-table-accent-bg: var(--bs-table-active-bg);
   color: var(--bs-table-active-color);
