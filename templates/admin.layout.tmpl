@@ -69,11 +69,26 @@
                             <span class="menu-title">Dashboard</span>
                         </a>
                     </li>
-                   
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                           aria-controls="ui-basic">
+                            <i class="ti-palette menu-icon"></i>
+                            <span class="menu-title">Reservations</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="navbar-collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-link" href="/admin/reservations-new">New
+                                        Reservations</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/admin/reservations-all">All
+                                        Reservations</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
-                   <li class="nav-item">
+                   <!--<li class="nav-item">
                         <a class="nav-link" href="/admin/reservations-all">
-                            <i class="ti-layout-list-post menu-icon"></i>
+                            <i class="ti- menu-icon"></i>
                             <span class="menu-title">All Reservations</span>
                         </a>
                     </li>
@@ -82,7 +97,7 @@
                             <i class="ti-layout-list-post menu-icon"></i>
                             <span class="menu-title">New Reservations</span>
                         </a>
-                    </li>
+                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/reservations-calendar">
                             <i class="ti-layout-list-post menu-icon"></i>
@@ -193,20 +208,3 @@
 
 
 {{end}}
-
-<!--  <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
-                           aria-controls="ui-basic">
-                            <i class="ti-palette menu-icon"></i>
-                            <span class="menu-title">Reservations</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="ui-basic">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"><a class="nav-link" href="/admin/reservations-new">New
-                                        Reservations</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/admin/reservations-all">All
-                                        Reservations</a></li>
-                            </ul>
-                        </div>
-                    </li> -->
