@@ -25,6 +25,7 @@ var infoLog *log.Logger
 var errorLog *log.Logger
 
 func main() {
+	fmt.Println("Hello world")
 	db, err := run()
 	if err != nil {
 		log.Fatal(err)
