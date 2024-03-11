@@ -15,7 +15,7 @@ func TestNoSurve(t *testing.T) {
 	case http.Handler:
 		//do nothing
 	default:
-		t.Error(fmt.Sprintf("NoSurf: type is not http.Handler, but is %T", v))
+		t.Errorf(fmt.Sprintf("NoSurf: type is not http.Handler, but is %T", v))
 	}
 
 }
@@ -29,7 +29,7 @@ func TestSessionLoad(t *testing.T) {
 	case http.Handler:
 		//do nothing
 	default:
-		t.Error(fmt.Sprintf("SessionLoad: type is not http.Handler, but is %T", v))
+		t.Errorf(fmt.Sprintf("SessionLoad: type is not http.Handler, but is %T", v))
 	}
 
 }

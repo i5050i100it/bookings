@@ -9,8 +9,7 @@ import (
 	"github.com/i5050i100it/bookings/internal/handlers"
 )
 
-func routes(app *config.AppConfig) http.Handler {
-
+func routes( *config.AppConfig) http.Handler {
 	mux := chi.NewRouter()
 
 	mux.Use(middleware.Recoverer)
@@ -43,7 +42,7 @@ func routes(app *config.AppConfig) http.Handler {
 
 	mux.Route("/admin", func(mux chi.Router) {
 		//mux.Use(Auth)
-		mux.Get("/dashboard", handlers.Repo.AdminDashbord)
+		mux.Get("/dashboard", handlers.Repo.AdminDashboard)
 
 		mux.Get("/reservations-new", handlers.Repo.AdminNewReservations)
 		mux.Get("/reservations-all", handlers.Repo.AdminAllReservations)
@@ -55,5 +54,6 @@ func routes(app *config.AppConfig) http.Handler {
 		mux.Get("/reservations/{src}/{id}/show", handlers.Repo.AdminShowReservation)
 		mux.Post("/reservations/{src}/{id}", handlers.Repo.AdminPostShowReservation)
 	})
+
 	return mux
 }
