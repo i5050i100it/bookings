@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/gob"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -25,14 +24,13 @@ var infoLog *log.Logger
 var errorLog *log.Logger
 
 func main() {
-	fmt.Println("Hello world")
 	db, err := run()
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer db.SQL.Close()
 
-	fmt.Println(fmt.Sprintf("starting application on port %s", portNumber))
+	// fmt.Println(fmt.Sprintf("starting application on port %s", portNumber))
 
 	srv := &http.Server{
 		Addr:    portNumber,
@@ -50,6 +48,7 @@ func run() (*driver.DB, error) {
 	gob.Register(models.Room{})
 	gob.Register(models.Restriction{})
 	gob.Register(map[string]int{})
+
 
 	// change this to true when in production
 	app.InProduction = false
